@@ -446,7 +446,11 @@
         <div class="nav-dot" data-slide="6"><span class="tooltip">Software Stack</span></div>
         <div class="nav-dot" data-slide="7"><span class="tooltip">Budget Option</span></div>
         <div class="nav-dot" data-slide="8"><span class="tooltip">ROI Calculator</span></div>
-        <div class="nav-dot" data-slide="9"><span class="tooltip">Next Steps</span></div>
+        <div class="nav-dot" data-slide="9"><span class="tooltip">Qwen3 Family</span></div>
+        <div class="nav-dot" data-slide="10"><span class="tooltip">SWE-Bench</span></div>
+        <div class="nav-dot" data-slide="11"><span class="tooltip">Mac Option</span></div>
+        <div class="nav-dot" data-slide="12"><span class="tooltip">Hybrid Strategy</span></div>
+        <div class="nav-dot" data-slide="13"><span class="tooltip">Next Steps</span></div>
     </nav>
 
     <!-- SLIDE 1: Title -->
@@ -628,15 +632,152 @@
         </div>
     </section>
 
-    <!-- SLIDE 10: Next Steps -->
+    <!-- SLIDE 10: The Qwen3 Family -->
     <section class="slide">
-        <div class="reveal slide-number">10 — Get Started</div>
+        <div class="reveal slide-number">10 — The Family</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">The Qwen3 Family</h2>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="card reveal" style="border-left:3px solid var(--text-dim);">
+                <div class="card-title" style="font-size:1.2rem;">Qwen3 <span style="color:var(--text-dim); font-weight:400; font-size:0.9rem;">Apr 2025</span></div>
+                <p style="color:var(--text-dim); font-size:1rem; margin-top:6px;">Base family. Dense: 0.6B, 1.7B, 4B, 8B, 14B, 32B. Sparse MoE: 30B-A3B, 235B-A22B. General purpose, Apache 2.0.</p>
+            </div>
+            <div class="card reveal" style="border-left:3px solid var(--accent);">
+                <div class="card-title" style="font-size:1.2rem;"><span class="hl">Qwen3-Coder-Next</span> <span style="color:var(--text-dim); font-weight:400; font-size:0.9rem;">Feb 2026</span></div>
+                <p style="color:var(--text); font-size:1rem; margin-top:6px;"><span class="hl-bold">80B total, 3B active.</span> Ultra-sparse MoE. Coding specialist. Runs on consumer hardware. <span class="hl">The one this deck is about.</span></p>
+            </div>
+            <div class="card reveal" style="border-left:3px solid var(--accent2);">
+                <div class="card-title" style="font-size:1.2rem;"><span style="color:var(--accent2);">Qwen3.5</span> <span style="color:var(--text-dim); font-weight:400; font-size:0.9rem;">Feb 2026 — just dropped</span></div>
+                <p style="color:var(--text-dim); font-size:1rem; margin-top:6px;">397B-A17B. 17B active per token. Native vision-language. <span class="hl-bold">19x faster</span> than Qwen3-Max at 256K context. New flagship.</p>
+            </div>
+            <div class="card reveal" style="border-left:3px solid rgba(255,255,255,0.15);">
+                <div class="card-title" style="font-size:1.2rem;">Qwen3.5-Plus <span style="color:var(--text-dim); font-weight:400; font-size:0.9rem;">API-only</span></div>
+                <p style="color:var(--text-dim); font-size:1rem; margin-top:6px;">Likely larger. Competing with GPT-5 and Opus directly. Not available for local use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 11: SWE-Bench Leaderboard -->
+    <section class="slide">
+        <div class="reveal slide-number">11 — Leaderboard</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">SWE-Bench Verified <span class="hl">Feb 2026</span></h2>
+        <div style="display:flex; flex-direction:column; gap:8px; max-width:720px;">
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">1.</span> Claude Opus 4.5</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Closed · $$$</span><span class="hl-bold" style="font-size:1.2rem;">80.9%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">2.</span> Claude Opus 4.6</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Closed · $$$</span><span class="hl-bold" style="font-size:1.2rem;">80.8%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">3.</span> MiniMax M2.5</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Open · API</span><span class="hl-bold" style="font-size:1.2rem;">80.2%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">4.</span> GPT-5.2</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Closed · $$$</span><span class="hl-bold" style="font-size:1.2rem;">80.0%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">5.</span> GLM-5 <span style="color:var(--text-dim); font-size:0.8rem;">(744B)</span></div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Open · API</span><span class="hl-bold" style="font-size:1.2rem;">77.8%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">6.</span> Claude Sonnet 4.5</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Closed · $$</span><span class="hl-bold" style="font-size:1.2rem;">77.2%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">7.</span> Kimi K2.5 <span style="color:var(--text-dim); font-size:0.8rem;">(32B active)</span></div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Open · API</span><span class="hl-bold" style="font-size:1.2rem;">76.8%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">8.</span> Gemini 3 Pro</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Closed · $$</span><span class="hl-bold" style="font-size:1.2rem;">76.2%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">9.</span> DeepSeek V3.2</div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--text-dim); font-size:0.85rem;">Open · Cheap API</span><span class="hl-bold" style="font-size:1.2rem;">73.0%</span></div>
+            </div>
+            <div class="card reveal" style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center; border:1px solid rgba(0,255,204,0.3); box-shadow:0 0 20px rgba(0,255,204,0.08);">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">10.</span> <span class="hl-bold">Qwen3-Coder-Next</span> <span style="color:var(--text-dim); font-size:0.8rem;">(3B active!)</span></div>
+                <div style="display:flex; gap:16px; align-items:center;"><span style="color:var(--accent); font-size:0.85rem; font-weight:600;">Open · Free/local</span><span class="hl-bold" style="font-size:1.2rem;">70.6%</span></div>
+            </div>
+        </div>
+        <div class="reveal" style="margin-top:20px; padding:16px 20px; background:linear-gradient(135deg, rgba(0,255,204,0.06), rgba(123,97,255,0.06)); border:1px solid rgba(0,255,204,0.12); border-radius:12px; font-size:1rem;">
+            Top 4 within <span class="hl-bold">1%</span> of each other. Qwen3-Coder-Next hits <span class="hl-bold">70.6%</span> with only <span class="hl-bold">3B active params</span> — <span class="hl">90% of frontier performance on a single GPU.</span>
+        </div>
+    </section>
+
+    <!-- SLIDE 12: Mac Option -->
+    <section class="slide">
+        <div class="reveal slide-number">12 — Apple Silicon</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">Mac Option — <span class="hl">Apple Silicon</span></h2>
+        <div class="cards-grid" style="grid-template-columns:1fr 1fr;">
+            <div class="card reveal">
+                <div class="card-title">Mac Mini M4 Pro 64GB</div>
+                <div class="card-gpu">$1,799</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:10px; line-height:1.5;">Fits model at Q4 but tight (~15GB left for context). ~20-25 t/s on full 80B. Starts swapping at 30K+ context.</p>
+                <div style="margin-top:12px; padding:10px 14px; background:rgba(0,255,204,0.06); border-radius:8px; font-size:0.9rem;">
+                    <span class="hl">Better:</span> Run Qwen3-Coder-30B-A3B instead → <span class="hl-bold">40-50 t/s</span> easily.
+                </div>
+                <div class="card-stats">
+                    <div><div class="stat-value">20-25</div><div class="stat-label">t/s (80B)</div></div>
+                    <div><div class="stat-value">~30K</div><div class="stat-label">Max context</div></div>
+                </div>
+            </div>
+            <div class="card reveal" style="border-color:rgba(0,255,204,0.2);">
+                <div class="card-title">Mac Studio M4 Max 128GB</div>
+                <div class="card-gpu">$3,199</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:10px; line-height:1.5;">Full model fits with headroom. ~400GB/s bandwidth. Room for 120K+ context. No swapping.</p>
+                <div class="card-stats">
+                    <div><div class="stat-value">20-30</div><div class="stat-label">t/s generation</div></div>
+                    <div><div class="stat-value">120K+</div><div class="stat-label">Context</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="reveal" style="margin-top:24px; padding:16px 20px; background:var(--bg-card); border:1px solid rgba(255,255,255,0.06); border-radius:12px; font-size:1rem; line-height:1.6;">
+            <span class="hl-bold">Key insight:</span> Apple Silicon unified memory = great for <em>fitting</em> big models, but bandwidth (~400GB/s) can't match a dedicated 4090 (1TB/s). For raw <span class="hl-bold">35+ t/s</span> on the full 80B, the PC build still wins.
+        </div>
+    </section>
+
+    <!-- SLIDE 13: The Hybrid Strategy -->
+    <section class="slide">
+        <div class="reveal slide-number">13 — Strategy</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">The Hybrid Strategy</h2>
+        <div class="roi-grid" style="grid-template-columns:1fr auto 1fr;">
+            <div class="roi-box reveal">
+                <div style="font-family:var(--font-display); font-weight:600; font-size:1.2rem; margin-bottom:16px; color:var(--accent);">Local — 80% of tasks</div>
+                <div class="roi-line"><span>Routine frontend</span><span class="roi-amount" style="color:var(--accent);">$0</span></div>
+                <div class="roi-line"><span>CRUD / APIs</span><span class="roi-amount" style="color:var(--accent);">$0</span></div>
+                <div class="roi-line"><span>Refactors & bug fixes</span><span class="roi-amount" style="color:var(--accent);">$0</span></div>
+                <div class="roi-line roi-total"><span>Unlimited parallel agents</span><span class="roi-amount" style="color:var(--accent);">$0/mo</span></div>
+            </div>
+            <div class="reveal roi-vs">+</div>
+            <div class="roi-box reveal">
+                <div style="font-family:var(--font-display); font-weight:600; font-size:1.2rem; margin-bottom:16px; color:var(--accent2);">Frontier APIs — 20%</div>
+                <div class="roi-line"><span>Complex architecture</span><span class="roi-amount">Claude Opus</span></div>
+                <div class="roi-line"><span>Multi-file reasoning</span><span class="roi-amount">GPT-5</span></div>
+                <div class="roi-line"><span>Hard problems only</span><span class="roi-amount">$$</span></div>
+                <div class="roi-line roi-total"><span>Save budget for what matters</span><span class="roi-amount">~$20/mo</span></div>
+            </div>
+        </div>
+        <div class="quote reveal" style="margin-top:24px;">
+            This is what the smartest builders are doing — Elvis's tweet showed this exact pattern. Local for volume, API for precision.
+        </div>
+    </section>
+
+    <!-- SLIDE 14: Next Steps -->
+    <section class="slide">
+        <div class="reveal slide-number">14 — Get Started</div>
         <div class="reveal accent-line"></div>
         <h2 class="reveal">Next Steps</h2>
         <div class="steps">
             <div class="step reveal">
                 <div class="step-num">1</div>
-                <div><div class="step-text">Decide: Budget ($900) or Sweet Spot ($2,100)?</div></div>
+                <div><div class="step-text">Decide: Budget ($900), Sweet Spot ($2,100), or Mac?</div><div class="step-hint">Consider Mac vs PC based on your ecosystem</div></div>
             </div>
             <div class="step reveal">
                 <div class="step-num">2</div>
@@ -653,6 +794,10 @@
             <div class="step reveal">
                 <div class="step-num">5</div>
                 <div><div class="step-text">Start running local coding agents 24/7</div></div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">6</div>
+                <div><div class="step-text">Watch Qwen3.5 (397B-A17B)</div><div class="step-hint">May be the next local frontier model when quantized</div></div>
             </div>
         </div>
     </section>
