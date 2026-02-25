@@ -449,8 +449,11 @@
         <div class="nav-dot" data-slide="9"><span class="tooltip">Qwen3 Family</span></div>
         <div class="nav-dot" data-slide="10"><span class="tooltip">SWE-Bench</span></div>
         <div class="nav-dot" data-slide="11"><span class="tooltip">Mac Option</span></div>
-        <div class="nav-dot" data-slide="12"><span class="tooltip">Hybrid Strategy</span></div>
-        <div class="nav-dot" data-slide="13"><span class="tooltip">Next Steps</span></div>
+        <div class="nav-dot" data-slide="12"><span class="tooltip">MiniMax M2.5</span></div>
+        <div class="nav-dot" data-slide="13"><span class="tooltip">M2.5 Benchmarks</span></div>
+        <div class="nav-dot" data-slide="14"><span class="tooltip">M5 Mac Studio</span></div>
+        <div class="nav-dot" data-slide="15"><span class="tooltip">Hybrid Strategy</span></div>
+        <div class="nav-dot" data-slide="16"><span class="tooltip">Next Steps</span></div>
     </nav>
 
     <!-- SLIDE 1: Title -->
@@ -458,7 +461,7 @@
         <div class="title-glow"></div>
         <div class="reveal title-badge">Local AI Infrastructure</div>
         <h1 class="reveal">Running Qwen3<br>Coder Next Locally</h1>
-        <p class="reveal subtitle">The cheapest path to 35+ t/s for local AI coding agents</p>
+        <p class="reveal subtitle">Local AI Inference: From Qwen3 to MiniMax M2.5 on Consumer Hardware</p>
     </section>
 
     <!-- SLIDE 2: What Is Qwen3 Coder Next? -->
@@ -742,9 +745,173 @@
         </div>
     </section>
 
-    <!-- SLIDE 13: The Hybrid Strategy -->
+    <!-- SLIDE 13: MiniMax M2.5 Overview -->
     <section class="slide">
-        <div class="reveal slide-number">13 — Strategy</div>
+        <div class="reveal slide-number">13 — MiniMax M2.5</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">MiniMax M2.5 — <span class="hl">Frontier Tier, Run It Locally</span></h2>
+        <p class="reveal subtitle" style="margin-top:0; margin-bottom:28px;">#3 on SWE-Bench Verified (80.2%) — open weights</p>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom:28px;">
+            <div class="card reveal" style="padding:20px;">
+                <div class="card-title">🧠 230B Parameters</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:6px;">MoE architecture — massive but sparse</p>
+            </div>
+            <div class="card reveal" style="padding:20px;">
+                <div class="card-title">🔓 Open Weights</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:6px;">You can run this yourself</p>
+            </div>
+            <div class="card reveal" style="padding:20px;">
+                <div class="card-title">🏆 Beats GPT-5.2</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:6px;">On SWE-Bench Verified</p>
+            </div>
+            <div class="card reveal" style="padding:20px;">
+                <div class="card-title">📏 196K Context</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:6px;">Native long-context support</p>
+            </div>
+            <div class="card reveal" style="padding:20px;">
+                <div class="card-title">❓ The Question</div>
+                <p style="color:var(--text-dim); font-size:0.95rem; margin-top:6px;">What hardware do you actually need?</p>
+            </div>
+        </div>
+        <h2 class="reveal" style="font-size:1.6rem; margin-bottom:20px;">Size at Different Quantizations</h2>
+        <div class="cards-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--accent);">~132GB</div>
+                <div style="font-size:0.85rem; color:var(--text-dim); margin-top:4px;">Q4_K_M — best quality</div>
+                <div style="font-size:0.8rem; color:var(--text-dim);">Needs 192GB+ RAM</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--accent);">~110GB</div>
+                <div style="font-size:0.85rem; color:var(--text-dim); margin-top:4px;">Q3_K_L — sweet spot</div>
+                <div style="font-size:0.8rem; color:var(--text-dim);">For 128GB machines</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--accent);">~101GB</div>
+                <div style="font-size:0.85rem; color:var(--text-dim); margin-top:4px;">Dynamic 3-bit</div>
+                <div style="font-size:0.8rem; color:var(--text-dim);">Compact option</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--accent);">~96GB</div>
+                <div style="font-size:0.85rem; color:var(--text-dim); margin-top:4px;">IQ2_KS</div>
+                <div style="font-size:0.8rem; color:var(--text-dim);">With quantized KV cache</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 14: MiniMax M2.5 Benchmarks -->
+    <section class="slide">
+        <div class="reveal slide-number">14 — M2.5 Hardware Benchmarks</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">MiniMax M2.5 — <span class="hl">Real Benchmarks</span></h2>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:780px;">
+            <div class="card reveal" style="padding:16px 22px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--text-dim); font-family:var(--font-display); font-weight:700; margin-right:12px;">1.</span> M3 Max 128GB <span style="color:var(--text-dim); font-size:0.85rem;">Q3_K_L</span></div>
+                <div style="display:flex; gap:20px; align-items:center;"><span class="hl-bold" style="font-size:1.2rem;">28.7 t/s</span><span style="color:var(--text-dim); font-size:0.9rem;">~$3,200</span></div>
+            </div>
+            <div class="card reveal" style="padding:16px 22px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--text-dim); font-family:var(--font-display); font-weight:700; margin-right:12px;">2.</span> M5 Max 128GB <span style="color:var(--text-dim); font-size:0.85rem;">Q3_K_L (est.)</span></div>
+                <div style="display:flex; gap:20px; align-items:center;"><span class="hl-bold" style="font-size:1.2rem;">~33-36 t/s</span><span style="color:var(--text-dim); font-size:0.9rem;">~$2,800</span></div>
+            </div>
+            <div class="card reveal" style="padding:16px 22px; display:flex; justify-content:space-between; align-items:center; border:1px solid rgba(0,255,204,0.3); box-shadow:0 0 20px rgba(0,255,204,0.08);">
+                <div><span style="color:var(--accent); font-family:var(--font-display); font-weight:700; margin-right:12px;">3.</span> <span class="hl-bold">M5 Ultra 192GB</span> <span style="color:var(--text-dim); font-size:0.85rem;">Q4_K_M (est.)</span></div>
+                <div style="display:flex; gap:20px; align-items:center;"><span class="hl-bold" style="font-size:1.2rem;">~40-50 t/s</span><span style="color:var(--accent); font-size:0.9rem; font-weight:600;">~$4,500 ⭐</span></div>
+            </div>
+            <div class="card reveal" style="padding:16px 22px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--text-dim); font-family:var(--font-display); font-weight:700; margin-right:12px;">4.</span> 2x RTX 4090 + 128GB DDR5</div>
+                <div style="display:flex; gap:20px; align-items:center;"><span class="hl-bold" style="font-size:1.2rem;">~35-45 t/s</span><span style="color:var(--text-dim); font-size:0.9rem;">~$3,800</span></div>
+            </div>
+            <div class="card reveal" style="padding:16px 22px; display:flex; justify-content:space-between; align-items:center;">
+                <div><span style="color:var(--text-dim); font-family:var(--font-display); font-weight:700; margin-right:12px;">5.</span> NVIDIA DGX / cloud</div>
+                <div style="display:flex; gap:20px; align-items:center;"><span class="hl-bold" style="font-size:1.2rem;">60+ t/s</span><span style="color:var(--text-dim); font-size:0.9rem;">$$$</span></div>
+            </div>
+        </div>
+        <div class="reveal" style="margin-top:24px; padding:16px 20px; background:linear-gradient(135deg, rgba(0,255,204,0.08), rgba(123,97,255,0.08)); border:1px solid rgba(0,255,204,0.15); border-radius:12px; font-size:1rem; line-height:1.6;">
+            For <span class="hl-bold">40+ t/s</span> on a frontier model (<span class="hl">#3 SWE-Bench</span>), the <span class="hl-bold">M5 Ultra 192GB</span> is the play. Spring 2026 release.
+        </div>
+    </section>
+
+    <!-- SLIDE 15: M5 Mac Studio -->
+    <section class="slide">
+        <div class="reveal slide-number">15 — M5 Mac Studio</div>
+        <div class="reveal accent-line"></div>
+        <h2 class="reveal">M5 Mac Studio — <span class="hl">Coming Spring 2026</span></h2>
+        <p class="reveal subtitle" style="margin-top:0; margin-bottom:28px;">Leaked in macOS 26.3 developer code</p>
+        <div class="cards-grid reveal" style="grid-template-columns:1fr 1fr 1fr; margin-bottom:24px;">
+            <div class="card" style="padding:18px;">
+                <div class="card-title">M5 Max + M5 Ultra</div>
+                <p style="color:var(--text-dim); font-size:0.9rem; margin-top:4px;">Fixing last year's weird M4 Max + M3 Ultra combo</p>
+            </div>
+            <div class="card" style="padding:18px;">
+                <div class="card-title">Same Design</div>
+                <p style="color:var(--text-dim); font-size:0.9rem; margin-top:4px;">Thunderbolt 5 ports</p>
+            </div>
+            <div class="card" style="padding:18px;">
+                <div class="card-title">M5 Ultra</div>
+                <p style="color:var(--text-dim); font-size:0.9rem; margin-top:4px;">Two M5 Max chips stitched together</p>
+            </div>
+        </div>
+        <h2 class="reveal" style="font-size:1.4rem; margin-bottom:16px;">Performance Estimates</h2>
+        <div style="display:flex; flex-direction:column; gap:10px; max-width:600px; margin-bottom:28px;">
+            <div class="reveal" style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:0.9rem; color:var(--text-dim); width:200px;">Single-core</span>
+                <div style="flex:1; height:24px; background:var(--bg-card); border-radius:6px; overflow:hidden; position:relative;">
+                    <div style="width:40%; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent2)); border-radius:6px;"></div>
+                </div>
+                <span class="hl-bold" style="font-size:0.95rem; width:80px; text-align:right;">~4,133</span>
+            </div>
+            <div class="reveal" style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:0.9rem; color:var(--text-dim); width:200px;">Multi-core M5 Ultra</span>
+                <div style="flex:1; height:24px; background:var(--bg-card); border-radius:6px; overflow:hidden; position:relative;">
+                    <div style="width:70%; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent2)); border-radius:6px;"></div>
+                </div>
+                <span class="hl-bold" style="font-size:0.95rem; width:80px; text-align:right;">~45,000</span>
+            </div>
+            <div class="reveal" style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:0.9rem; color:var(--text-dim); width:200px;">GPU Metal (unbinned)</span>
+                <div style="flex:1; height:24px; background:var(--bg-card); border-radius:6px; overflow:hidden; position:relative;">
+                    <div style="width:95%; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent2)); border-radius:6px;"></div>
+                </div>
+                <span class="hl-bold" style="font-size:0.95rem; width:80px; text-align:right;">~415,000</span>
+            </div>
+            <div class="reveal" style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:0.9rem; color:var(--text-dim); width:200px;">Memory bandwidth</span>
+                <div style="flex:1; height:24px; background:var(--bg-card); border-radius:6px; overflow:hidden; position:relative;">
+                    <div style="width:80%; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent2)); border-radius:6px;"></div>
+                </div>
+                <span class="hl-bold" style="font-size:0.95rem; width:80px; text-align:right;">~800GB/s</span>
+            </div>
+        </div>
+        <h2 class="reveal" style="font-size:1.4rem; margin-bottom:16px;">Expected Pricing</h2>
+        <div class="cards-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-size:0.85rem; color:var(--text-dim);">M5 Max base (48GB)</div>
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--text); margin-top:4px;">$2,000</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-size:0.85rem; color:var(--text-dim);">M5 Max 128GB</div>
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--text); margin-top:4px;">$2,600-2,800</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-size:0.85rem; color:var(--text-dim);">M5 Ultra base (96GB)</div>
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--text); margin-top:4px;">$4,000</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center; border:1px solid rgba(0,255,204,0.3); box-shadow:0 0 20px rgba(0,255,204,0.08);">
+                <div style="font-size:0.85rem; color:var(--accent);">M5 Ultra 192GB ← THE ONE</div>
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--accent); margin-top:4px;">$4,400-4,600</div>
+            </div>
+            <div class="card" style="padding:16px; text-align:center;">
+                <div style="font-size:0.85rem; color:var(--text-dim);">M5 Ultra 384GB</div>
+                <div style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--text); margin-top:4px;">$6,400+</div>
+            </div>
+        </div>
+        <div class="reveal" style="margin-top:24px; padding:16px 20px; background:linear-gradient(135deg, rgba(0,255,204,0.08), rgba(123,97,255,0.08)); border:1px solid rgba(0,255,204,0.15); border-radius:12px; font-size:1rem; line-height:1.6;">
+            <span class="hl-bold">M5 Ultra 192GB at ~$4,500</span> runs MiniMax M2.5 (frontier-tier, #3 SWE-Bench) locally at <span class="hl-bold">40+ t/s</span>. No API costs. Pays for itself in <span class="hl">~2 years</span> vs cloud pricing.
+        </div>
+    </section>
+
+    <!-- SLIDE 16: The Hybrid Strategy -->
+    <section class="slide">
+        <div class="reveal slide-number">16 — Strategy</div>
         <div class="reveal accent-line"></div>
         <h2 class="reveal">The Hybrid Strategy</h2>
         <div class="roi-grid" style="grid-template-columns:1fr auto 1fr;">
@@ -769,9 +936,9 @@
         </div>
     </section>
 
-    <!-- SLIDE 14: Next Steps -->
+    <!-- SLIDE 17: Next Steps -->
     <section class="slide">
-        <div class="reveal slide-number">14 — Get Started</div>
+        <div class="reveal slide-number">17 — Get Started</div>
         <div class="reveal accent-line"></div>
         <h2 class="reveal">Next Steps</h2>
         <div class="steps">
